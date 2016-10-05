@@ -2,7 +2,7 @@
 body, html {
 	height: 100%;
 	margin:0 auto;
-    background-image: url("forestbg.jpg");
+    background-image: url("bg2.jpg");
   	position: relative;
   	background-attachment: fixed;
   	background-position: center;
@@ -212,7 +212,7 @@ a {
     margin: 5px 20px 40px 40px;
     padding: 20px;
     border:1px solid black;
-    background: rgba(224, 224, 209, 0.5);
+    background: rgba(224, 224, 209, 0.7);
     font-family: Verdana;
 }
 
@@ -250,7 +250,7 @@ a {
     text-decoration: none;
     display: inline;
 }
-#blog #facebook {
+#blog .facebook {
     background-color: #3b5998;
     width: 80px;
     color: white;
@@ -258,7 +258,7 @@ a {
     margin: 5px; 
     position: relative;
 }
-#blog #comment, #blog #viewComments {
+#blog .comment, #blog .viewComments {
     background-color: white;
     width: 120px;
     text-align: center;
@@ -269,14 +269,14 @@ a {
     padding: 5px;
 }
 
-#blog #facebook div {
+#blog .facebook div {
     position: absolute;
     top: 50%;
     left: 60%;
     transform: translate(-50%, -50%);
 }
 
-#blog #twitter {
+#blog .twitter {
     color: white;
     font-family: Helvetica;
     background-color: #00aced;
@@ -284,11 +284,14 @@ a {
     margin: 5px;
     position: relative;
 }
-#blog #twitter div {
+#blog .twitter div {
     position: absolute;
     top: 50%;
     left: 60%;
   transform: translate(-50%, -50%);
+}
+#blog .socialMedia a > div:hover {
+    opacity: 0.7;
 }
 
 /* postBottom end */
@@ -307,6 +310,7 @@ input[type=text] {
     background-repeat: no-repeat;
     background-position: 170px;
     padding: 10px;
+    cursor: pointer;
     }
 
 #blog .sidebar {
@@ -341,26 +345,27 @@ input[type=text] {
 /* SIDEBAR end */
 
 /* olderPosts */
+
 #blog .olderPosts {
-    font-family: Arial;
+    font-family: Helvetica;
     text-align: center;
     margin-right: 20px;
     margin-bottom: 30px;
-    font-size: 18px;
-    background-color: rgba(0,0,0, 0.7);
-    width: 100px;
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    height: auto;
     float: right;
-    border-radius: 4px;
+    padding: 5px 10px 5px 10px;
 }
 
 #blog .olderPosts a {
-    color: lightgrey;
+    color: black;
     display: block;
 
 }
 
-#blog .olderPosts a:hover {
-    color: cadetblue;
+#blog .olderPosts:hover {
+    opacity: 0.7;
 }
 
 /* olderPosts end */

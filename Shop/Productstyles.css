@@ -1,0 +1,276 @@
+/* default */
+body, html {
+	height: 100%;
+	margin:0 auto;
+    background-image: url("productbg.jpg");
+  	position: relative;
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+html, body, h1, ul, header {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+/* end default */
+
+
+/* navbar */
+
+#navbar {
+    height: 50px;
+    border-bottom: 1px solid black;
+    background: rgba(50, 50, 50, 1);
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+    }
+
+#navbar .flexContainer {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+}
+
+#navbar .flexContainer ul {
+    display: flex;
+    list-style: none;
+}
+
+#navbar .flexContainer li {
+    padding-left: 30px;
+}
+
+#navbar .flexContainer h2 a{
+    color: white; 
+    font-size: 30px;
+    font-family: 'Righteous', cursive;
+}
+
+#navbar .flexContainer li a {
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    font-size: 20px;
+    text-shadow: 1px 1px black; 
+    letter-spacing: 2px;
+}
+
+#navbar .divider {
+    margin-right: 40px;
+}
+
+#navbar .flexContainer li a:hover {
+    animation: changeColor 1s;
+    animation-fill-mode: forwards;
+}
+
+
+#navbar > .flexContainer > .nav .active, #navbar > 
+.flexContainer > .dropdown .active {
+    color: #b08c4f;
+}
+
+
+#navbar ul:nth-of-type(2) {
+    display: none;
+}
+
+
+/* animation */
+
+@keyframes changeColor{
+    to {
+        color:  #b08c4f;
+        text-shadow: 1px 1px black;
+    }
+}
+
+/* end animation */
+
+
+
+
+@media (max-width: 770px) {
+	#navbar ul:nth-of-type(1) {
+		display: none;
+	}
+
+	#navbar ul:nth-of-type(2) {
+		display: inline-block;
+		position: relative;
+
+	}
+
+	#navbar .dropNav {
+		display: none;
+		position: absolute;
+		right: 0;
+		background-color:rgba(50, 50, 50, 1);
+		box-shadow: 0 8px 16px 0;
+		min-width: 150px;
+		opacity: 0.9;
+	}
+
+	#navbar .dropNav a {
+		display: block;
+		width: 75%;
+		border-bottom:1px solid black;
+		text-align: center;
+		margin: 10px 0 10px 0;
+	}
+
+	#navbar #burgermenu {
+		width: 45px;
+		height: 45px;
+	}
+	
+
+	#navbar .dropdown:hover .dropNav {
+		display: block;
+	}
+
+	
+
+
+}
+/* Navbar end */
+
+
+.productLayout {
+    display: flex;
+    flex-direction: column; 
+}
+.headpicinfo {
+    text-align: center;
+    margin: auto;
+}
+.headpicinfo div {
+}
+.productHeader {
+    margin-top: 70px;
+    font-family: 'Righteous';
+    font-size: 22px;
+    border: 1px solid black;
+    background: rgba(235, 235, 224, 0.7);
+    color: white;
+    text-shadow: 3px 3px black;
+    margin-bottom: 15px;
+    width: auto;
+}
+
+.productLayout div div {
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background: rgba(235, 235, 224, 0.2);
+    
+
+}
+.productPic {
+    width: auto;
+    height: auto;
+    
+    
+}
+@media (max-width: 630px) {
+    .productPic img {
+        width: 400px;
+    }
+}
+@media (max-width: 440px) {
+    .productPic img {
+        width: 210px;
+    }
+}
+.productInfo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.productInfo h2 {
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family: Arial;
+    font-size: 32px;
+}
+.productLayout .productInfo .infoText {
+    text-align: left;
+    color: aliceblue;
+    text-shadow: 2px 2px 8px #0099ff;
+    font-family: Verdana;
+    border: none;
+    background: none;
+    flex: 0 0 45%;
+    
+    
+}
+.productLayout .productInfo .productFeatures {
+    text-align: left;
+    color: aliceblue;
+    text-shadow: 2px 2px 8px #0099ff;
+    font-family: Verdana;
+    border: none;
+    background: none;
+    flex: 0 0 45%;
+    
+}
+.productLayout .productInfo .productFeatures .colors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: none;
+    background: none;
+}
+.headpicinfo .productInfo .productFeatures .colors > div {
+    border: 1px solid black;
+    height: 10px;
+    width: 10px;
+    margin: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+#red {
+    background: #b30000;
+}
+#blue {
+    background: #000066;
+}
+#green {
+    background: #004d00;
+}
+#black {
+    background: black;
+}
+.productLayout .headpicinfo #backArrow {
+    border: 1px solid black;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    color: aliceblue;
+    text-shadow: 2px 2px 8px #0099ff;
+    background: rgba(235, 235, 224, 0.2);
+    margin-bottom: 30px;
+}
+.productLayout .headpicinfo #backArrow a {
+    color: aliceblue;
+    text-shadow: 2px 2px 8px #0099ff;
+}
+.productLayout .headpicinfo #backArrow a:hover {
+    color: grey;
+}
